@@ -10,18 +10,18 @@ instanceName = config['instanceName']
 login = config['login']
 password = config['password']
 
-print(f'Авторизуемся под учетной записью {login}'+'\n')
+print(f'РђРІС‚РѕСЂРёР·СѓР№СЃСЏ {login}'+'\n')
 
 url = f'{instanceName}/authorizationservice/token'
 body = f'grant_type=password&username={login}&password={password}&area=Default'
 
 response = requests.post(url,data=body).json()
 
-print('Получили токен'+'\n')
+print('РўРѕРєРµРЅ РЅР° РјРµСЃС‚Рµ'+'\n')
 
 token = response['access_token']
 
-print('я здесь')
+print('РџРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёР№ С‚РѕРєРµРЅ' + token)
 
 
 
